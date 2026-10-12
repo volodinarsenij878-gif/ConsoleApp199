@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Program49
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.Write("Введите первое слово: ");
+            string word1 = Console.ReadLine();
+
+            Console.Write("Введите второе слово: ");
+            string word2 = Console.ReadLine();
+
+            // Если пользователь ничего не ввёл, считаем длину 0 — программа не упадёт
+            int len1 = word1?.Length ?? 0;
+            int len2 = word2?.Length ?? 0;
+
+            if (len1 == len2)
+                Console.WriteLine("Слова одинаковой длины.");
+            else
+                Console.WriteLine($"Слова разной длины: {len1} и {len2} символов.");
+        }
+    }
+}
